@@ -1,0 +1,27 @@
+<mat-card class="example-card">
+    <mat-card-header>
+  
+      <mat-card-title>Session List</mat-card-title>
+      <mat-card-subtitle>Select a list to make appoinments</mat-card-subtitle>
+      </mat-card-header>
+     <mat-card-content>
+
+            <mat-list>
+            <mat-list-item *ngFor="let session of sessions">
+            <mat-icon mat-list-icon class="icon">calendar_today</mat-icon>
+            <h3 matLine>{{session.doctor_name}}-{{session.speciality_name}}</h3>
+            <p matLine>
+                <span class="hospitalName">{{session.hospital_name}}</span>
+                <span class="dateHere">{{session.date_time}}</span>
+                <span class="next">{{session.next}}</span>
+
+                <button mat-raised-button color="accent" class="button" (click)="book(session.id)">
+                    <mat-icon>info</mat-icon>
+                    <span>BOOK NOW</span>
+                </button>
+            </p>
+            </mat-list-item>
+            </mat-list>
+
+</mat-card-content>
+</mat-card>

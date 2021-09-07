@@ -1,0 +1,31 @@
+.icon
+{
+    font-size:3em !important;
+    width: 60px !important;
+    margin-top: -0.8em !important;
+}
+
+.button
+{
+    margin-left: 2em !important;
+}
+
+.hospitalName{
+    color:seagreen !important;
+}
+
+.dateHere
+{
+    
+    color: rgb(231, 21, 67) !important;
+    margin-left: 1em !important;
+}
+
+.next
+{
+    color: blanchedalmond;
+    background-color: blueviolet;
+    padding: 1em;
+    margin-left: 30px;
+    
+}

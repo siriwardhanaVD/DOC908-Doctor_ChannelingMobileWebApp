@@ -1,0 +1,42 @@
+.example-container {
+    width: 100%;
+    height: auto;
+    position: absolute ;
+    bottom: 0px;
+    top: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+   
+    align-items: top;
+    justify-content: top;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    width: 300px;
+  }
+
+ h3,p{
+
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+
+
+  a{
+
+    text-decoration: none;
+    color: darkviolet;
+    text-transform: uppercase;
+    
+  }
+
+  #profilePhoto
+  {
+      width: 150px;
+      margin-left: 40px;
+  }

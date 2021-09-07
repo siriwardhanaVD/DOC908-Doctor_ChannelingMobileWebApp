@@ -1,0 +1,69 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      <mat-card-title>Home Page</mat-card-title>
+      <mat-card-subtitle>Select Doctors, Hospitals or Specialities to Filter Sessions</mat-card-subtitle>
+      </mat-card-header>
+     <mat-card-content>
+
+<!--speciality-->
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Select Speciality</mat-label>
+            <input type="text"
+                   placeholder="Select Speciality"
+                   aria-label="Speciality"
+                   matInput
+                   [formControl]="specialityControl"
+                   [matAutocomplete]="auto1">
+                   <mat-icon matSuffix>brightness_5</mat-icon>
+            <mat-autocomplete #auto1="matAutocomplete" [displayWith]="displayFn1">
+              <mat-option *ngFor="let speciality of filteredSpecialities | async" [value]="speciality">
+                {{speciality.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+
+  <!--Hospital-->
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Select Hospital</mat-label>
+    <input type="text"
+           placeholder="Select Hospital"
+           aria-label="Hospital"
+           matInput
+           [formControl]="hospitalControl"
+           [matAutocomplete]="auto2">
+           <mat-icon matSuffix>business</mat-icon>
+    <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFn2">
+      <mat-option *ngFor="let hospital of filteredHospitals | async" [value]="hospital">
+        {{hospital.name}}-{{hospital.place}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  
+ <!---doctor--->
+ <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Select Doctor</mat-label>
+    <input type="text"
+           placeholder="Select Doctor"
+           aria-label="Doctor"
+           matInput
+           [formControl]="doctorControl"
+           [matAutocomplete]="auto3">
+           <mat-icon matSuffix>medical_services</mat-icon>
+    <mat-autocomplete #auto3="matAutocomplete" [displayWith]="displayFn3">
+      <mat-option *ngFor="let doctor of filteredDoctors | async" [value]="doctor">
+        {{doctor.name}} - {{doctor.speciality_name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+</mat-card-content>
+
+<mat-card-actions>
+    <button mat-raised-button (click)="reset()" >RESET</button>
+    <button mat-raised-button color="accent" (click)="search()">SEARCH</button>
+</mat-card-actions>
+</mat-card>

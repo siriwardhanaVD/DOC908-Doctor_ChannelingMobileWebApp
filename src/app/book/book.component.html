@@ -1,0 +1,55 @@
+<mat-card class="example-card">
+    <mat-card-header>
+  
+      <mat-card-title>Book Appoinments</mat-card-title>
+      <mat-card-subtitle>Enter details to make appoinments</mat-card-subtitle>
+      </mat-card-header>
+     <mat-card-content>
+
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input [formControl]="nameControl" matInput placeholder="John Zena">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Enter Your Name</mat-hint>
+            </mat-form-field>
+    </p>
+
+
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input [formControl]="emailControl" matInput placeholder="John@example.com">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-hint>Enter Your Email</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile</mat-label>
+          <input [formControl]="mobileControl" matInput placeholder="111-222-333">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-hint>Enter Your Mobile</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>NIC Number</mat-label>
+          <input [formControl]="nicControl" matInput placeholder="1234546789">
+          <mat-icon matSuffix>nic</mat-icon>
+          <mat-hint>Enter Your NIC</mat-hint>
+        </mat-form-field>
+    </p>
+
+
+
+</mat-card-content>
+
+<mat-card-actions>
+    <button mat-raised-button (click)="reset()">RESET</button>
+    <button mat-raised-button color="accent" (click)="confirm()">CONFIRM BOOKING</button>
+</mat-card-actions>
+
+</mat-card>
